@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kitchen Display</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+body{
+    background:#f4f4f4;
+}
+
+h1{
+    text-align:center;
+    padding:20px;
+    background:#ff5722;
+    color:white;
+}
+
+.container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:20px;
+    padding:30px;
+}
+
+.order-card{
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 0 10px gray;
+}
+
+.order-card h2{
+    color:#ff5722;
+}
+
+.status{
+    color:green;
+    font-weight:bold;
+}
+
+button{
+    background:#28a745;
+    color:white;
+    border:none;
+    padding:10px 20px;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#218838;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>👨‍🍳 Kitchen Display System</h1>
+
+<div class="container">
+
+<div class="order-card">
+
+<h2>Table 1</h2>
+
+<p><b>Order:</b> Chicken Biryani</p>
+
+<p><b>Qty:</b> 2</p>
+
+<p class="status" id="status1">Preparing</p>
+
+<button onclick="ready(1)">
+Mark Ready
+</button>
+
+</div>
+
+<div class="order-card">
+
+<h2>Table 2</h2>
+
+<p><b>Order:</b> Burger</p>
+
+<p><b>Qty:</b> 1</p>
+
+<p class="status" id="status2">Preparing</p>
+
+<button onclick="ready(2)">
+Mark Ready
+</button>
+
+</div>
+
+<div class="order-card">
+
+<h2>Table 3</h2>
+
+<p><b>Order:</b> Pizza</p>
+
+<p><b>Qty:</b> 3</p>
+
+<p class="status" id="status3">Preparing</p>
+
+<button onclick="ready(3)">
+Mark Ready
+</button>
+
+</div>
+
+</div>
+
+<script>
+
+function ready(id){
+
+document.getElementById("status"+id).innerHTML="✅ Ready";
+
+}
+
+</script>
+
+</body>
+</html>
+<button onclick="window.location.href='feedback.html'">
+Give Feedback
+</button>

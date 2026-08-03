@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smart Dining Table System</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+<body>
+
+<!-- Header -->
+
+<header>
+
+<div class="logo">
+🍽 Smart Dining
+</div>
+
+<nav>
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#menu">Menu</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#contact">Contact</a></li>
+<li><a href="#cart">Cart</a></li>
+</ul>
+</nav>
+
+</header>
+
+<!-- Hero Section -->
+
+<section id="home" class="hero">
+
+<div class="hero-content">
+
+<h1>Welcome to Smart Dining Table</h1>
+
+<p>
+Scan QR Code, Order Delicious Food, Track Your Order and Enjoy Faster Service.
+</p>
+
+<button onclick="scrollMenu()">
+Explore Menu
+</button>
+
+</div>
+
+<div class="hero-image">
+
+<img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=900"
+alt="Restaurant">
+
+</div>
+
+</section>
+
+<!-- Menu -->
+
+ <div style="text-align:center;margin:20px;">
+<input
+type="text"
+id="search"
+placeholder="Search Food..."
+onkeyup="searchFood()"
+style="padding:10px;width:300px;border-radius:5px;">
+
+</div>
+
+<section id="menu">
+
+<h2 class="title">Our Special Menu</h2>
+
+<div class="menu-container">
+    <div class="buttons">
+
+<button onclick="window.location.href='bill.html'">
+🧾 View Bill
+</button>
+
+<button onclick="window.location.href='feedback.html'">
+⭐ Feedback
+</button>
+
+<button onclick="window.location.href='login.html'">
+🔐 Admin Login
+</button>
+
+</div>
+
+<div class="card">
+
+<img src="biriyani" alt="Chicken Biryani">
+
+<h3>Chicken Biryani</h3>
+
+<p>₹180</p>
+
+<button onclick="addCart('Chicken Biryani',180)">
+Add To Cart
+</button>
+
+</div>
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1512058564366-18510be2db19?w=600" alt="Veg Fried Rice">
+
+<h3>Veg Fried Rice</h3>
+
+<p>₹140</p>
+
+<button onclick="addCart('Veg Fried Rice',140)">
+Add To Cart
+</button>
+
+</div>
+
+<div class="card">
+
+<img src="pizza" alt="Pizza">
+
+<h3>Pizza</h3>
+
+<p>₹220</p>
+
+<button onclick="addCart('Pizza',220)">
+Add To Cart
+</button>
+
+</div>
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=600" alt="Burger">
+
+<h3>Burger</h3>
+
+<p>₹150</p>
+
+<button onclick="addCart('Burger',150)">
+Add To Cart
+</button>
+
+</div>
+
+<div class="card">
+
+<img src="frish juice" alt="Juice">
+
+<h3>Fresh Juice</h3>
+
+<p>₹90</p>
+
+<button onclick="addCart('Fresh Juice',90)">
+Add To Cart
+</button>
+
+</div>
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?w=600" alt="Ice Cream">
+
+<h3>Ice Cream</h3>
+
+<p>₹80</p>
+
+<button onclick="addCart('Ice Cream',80)">
+Add To Cart
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- Cart Section -->
+
+<section id="cart" class="cart">
+
+<h2>Your Cart</h2>
+
+<div id="cartItems">
+<p>No items added.</p>
+</div>
+
+<h3>Total: ₹<span id="total">0</span></h3>
+
+<button onclick="placeOrder()">
+Place Order
+</button>
+
+</section>
+
+<!-- QR Code Section -->
+
+<section class="qr">
+
+<h2>Scan QR Code</h2>
+
+<p>Scan the QR Code to order from your mobile.</p>
+
+<img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=SmartDiningTable"
+alt="QR Code">
+
+</section>
+
+<!-- About -->
+
+<section id="about" class="about">
+
+<h2>About Us</h2>
+
+<p>
+
+Smart Dining Table System is a modern restaurant solution
+that allows customers to scan a QR code, browse the menu,
+place orders digitally, and enjoy a faster dining experience.
+It reduces waiting time and improves customer satisfaction.
+
+</p>
+
+</section>
+
+<!-- Contact -->
+
+<section id="contact" class="contact">
+
+<h2>Contact Us</h2>
+
+<p><i class="fa-solid fa-location-dot"></i> Chennai, Tamil Nadu</p>
+
+<p><i class="fa-solid fa-phone"></i> +91 9876543210</p>
+
+<p><i class="fa-solid fa-envelope"></i> smartdining@gmail.com</p>
+
+</section>
+
+<!-- Footer -->
+
+<footer>
+
+<p>
+
+© 2026 Smart Dining Table System | All Rights Reserved
+
+</p>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
